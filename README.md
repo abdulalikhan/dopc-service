@@ -2,7 +2,7 @@
 
 A service built with the 🚀 Beego web framework
 
-**Link to the deployed service: [dopc-service.onrender.com](https://dopc-service.onrender.com/)**
+**Example request to the deployed service endpoint: [dopc-service.onrender.com/api/v1/delivery-order-price?venue_slug=home-assignment-venue-helsinki&cart_value=1000&user_lat=60.17094&user_lon=24.93087](https://dopc-service.onrender.com/api/v1/delivery-order-price?venue_slug=home-assignment-venue-helsinki&cart_value=1000&user_lat=60.17094&user_lon=24.93087)**
 
 ## Docker
 
