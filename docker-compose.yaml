@@ -1,0 +1,13 @@
+version: '3'
+networks:
+  dopc_service_network_compose:
+    driver: bridge 
+services:
+  dopc_service:
+    container_name: dopc_service
+    build: .
+    restart: unless-stopped
+    networks:
+      dopc_service_network_compose:
+    ports:
+    - "8000:8000"

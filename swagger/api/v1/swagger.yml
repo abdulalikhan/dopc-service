@@ -1,0 +1,49 @@
+swagger: "2.0"
+info: {}
+basePath: /api/v1
+paths:
+  /delivery-order-price/:
+    get:
+      tags:
+      - delivery-order-price
+      description: |-
+        Get the price for a delivery order based on the provided venue slug, cart value, and user's location.
+        <br>
+      operationId: DeliveryPriceHandler.Get Delivery Price
+      parameters:
+      - in: query
+        name: venue_slug
+        description: The venue slug
+        required: true
+        type: string
+      - in: query
+        name: cart_value
+        description: The value of the shopping cart
+        required: true
+        type: integer
+        format: int64
+      - in: query
+        name: user_lat
+        description: The latitude of the user
+        required: true
+        type: number
+        format: double
+      - in: query
+        name: user_lon
+        description: The longitude of the user
+        required: true
+        type: number
+        format: double
+      responses:
+        "200":
+          description: '"The calculated price details"'
+          schema:
+            $ref: '#/definitions/PriceResponse'
+        "400":
+          description: '{string}  "Invalid input parameters"'
+        "500":
+          description: '{string}  "Internal server error"'
+definitions:
+  PriceResponse:
+    title: PriceResponse
+    type: object
