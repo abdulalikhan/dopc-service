@@ -2,6 +2,8 @@
 
 A service built with the 🚀 Beego web framework
 
+**Link to the deployed service: [dopc-service.onrender.com](https://dopc-service.onrender.com/)**
+
 ## Docker
 
 ```shell
